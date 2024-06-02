@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean - Register</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/cadastrar.js" defer></script>
+</head>
+<body>
+    <header class="top-bar">
+        <a href="https://www.fiap.com.br/graduacao/global-solution/" class="logo">Ocean</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./visualizar.html">Visualise</a></li>
+                <li><a href="https://www.fiap.com.br/graduacao/global-solution/">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="assets/images/OCEAN LOOP (1080p).mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+    <div class="center">
+        <div class="card">
+            <div class="form-container fade-in">
+                <h2>Register a Navigation</h2>
+                <form id="registerForm" novalidate>
+                    <label for="nome">Ship name:</label>
+                    <input type="text" id="nome" name="nome" pattern="^[^.!*$&]+$" placeholder="Input the name of the ship" required>
+                    <p class="error-message" id="nomeError"></p>
+
+                    <label for="leaving-date">Leaving date:</label>
+                    <input type="date" id="leaving-date" name="leaving-date" placeholder="Input the leaving date" required>
+                    <p class="error-message" id="leavingError"></p>
+
+                    <label for="arriving-date">Arriving date:</label>
+                    <input type="date" id="arriving-date" name="arriving-date" placeholder="Input the arriving date" required>
+                    <p class="error-message" id="arrivingError"></p>
+
+                    <label for="ocean-target">Ocean target:</label>
+                    <select id="ocean-target" name="ocean-target" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Antártico">Antártico</option>
+                        <option value="Ártico">Ártico</option>
+                        <option value="Atlântico Norte">Atlântico Norte</option>
+                        <option value="Atlântico Sul">Atlântico Sul</option>
+                        <option value="Índico">Índico</option>
+                        <option value="Pacífico Norte">Pacífico Norte</option>
+                        <option value="Pacífico Sul">Pacífico Sul</option>
+                    </select>
+                    <div class="error-message" id="oceanTargetError"></div>
+                    
+                    <label for="crew-number">Crew number:</label>
+                    <input type="number" id="crew-number" name="crew-number" min="1" placeholder="Input the number of crew members" required>
+                    <p class="error-message" id="crewError"></p>
+
+                    <label for="function">Function:</label>
+                    <textarea id="function" name="function" maxlength="130" rows="4" placeholder="Input the function of the ship" required></textarea>
+                    <p class="error-message" id="functionError"></p>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,403 @@
+/* Estilo base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a003a; /* Cor de fundo #0a003a para a página */
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    padding: 0 1%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-y: auto;
+}
+
+/* Estilo específico para a página visualizar.html */
+.visualizar-body {
+    background-color: #0a003a; /* Cor de fundo específica para visualizar.html */
+    padding: 1rem; /* Espaçamento das bordas da página */
+    /* Outros estilos específicos para visualizar.html */
+}
+/* Estilo para a barra de rolagem do Chrome, Edge e Safari */
+.visualizar-body::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+    border-radius: 10px; /* Arredonda a barra de rolagem */
+    background-color: transparent; /* Cor do fundo da barra de rolagem */
+    mix-blend-mode: difference; /* Sobreposição da barra de rolagem sobre o vídeo */
+}
+
+/* Estilo para o thumb */
+.visualizar-body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.7); /* Cor do thumb (branco com 0.7 de opacidade) */
+    border-radius: 10px; /* Arredonda o thumb */
+}
+
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação de saída */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Classe para animação de entrada */
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+/* Classe para animação de saída */
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Para que o vídeo fique atrás de todos os outros elementos */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que o vídeo cubra toda a área */
+}
+
+.center {
+    z-index: 1; /* Para que o conteúdo fique acima do vídeo */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-container-visualise {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: auto;
+    background-color: rgb(12, 12, 71);
+    opacity: 75%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #0a003a; /* Borda */
+}
+.card-visualise {
+    position: relative;
+    width: 355px;
+    height: 378px;
+    background-color: rgb(12, 12, 71);
+    opacity: 75%;
+    border-radius: 8px;
+    border: 1px solid #0a003a; /* Borda */
+    overflow-y: auto; /* Adicionando rolagem vertical quando necessário */
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+    transition: box-shadow 0.3s ease; /* Transição suave para sombra ao passar o mouse */
+}
+
+.card-visualise h3 {
+    font-family: 'Arial', sans-serif; /* Fonte para o título */
+    font-size: 1.5em; /* Tamanho da fonte */
+    margin-bottom: 10px;
+    text-align: center; /* Centraliza o nome do navio */
+    min-height: 2.5em; /* Altura mínima para manter o alinhamento */
+}
+
+.card-item {
+    display: flex;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card-label {
+    width: 135px; /* Largura fixa para os labels */
+    font-weight: bold;
+    margin-right: 10px; /* Espaçamento entre o label e o valor */
+}
+
+.card-value {
+    flex: 1; /* Para ocupar o restante do espaço */
+    word-wrap: break-word; /* Quebra de linha para palavras longas */
+}
+
+.card-value p {
+    margin: 0; /* Remove margin para parágrafos */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+}
+
+.card-visualise p {
+    font-family: 'Arial', sans-serif; /* Fonte para o texto */
+    font-size: 1em; /* Tamanho da fonte */
+    margin-bottom: 10px;
+    line-height: 1.5; /* Adiciona espaçamento entre as linhas */
+}
+
+.card-visualise:hover {
+    box-shadow: 10px 8px 16px rgba(255, 255, 255, 0.4); /* Efeito de sombra ao passar o mouse */
+}
+
+.card-content {
+    padding-top: 15px;
+    display: grid;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.card-content p {
+    padding-top: 10px;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.card-content a {
+    display: grid;
+    justify-content: center;
+    font-size: larger;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.button {
+    text-decoration: none; /* remover sublinhado do link */
+    color: #0a003a; /* cor do texto dos botões */
+    padding: 8px 20px; /* espaçamento interno dos botões */
+    border: 1px solid #0a003a; /* borda dos botões */
+    border-radius: 5px; /* bordas arredondadas dos botões */
+    background-color: #ddd; /* cor de fundo dos botões */
+    transition: background-color 0.3s, color 0.3s; /* transição suave ao passar o mouse */
+    width: 150px; /* Defina o tamanho horizontal desejado */
+    margin-bottom: 5px; /* Espaçamento vertical entre os botões */
+}
+
+.button:hover {
+    background-color: #0a003a; /* cor de fundo ao passar o mouse */
+    color: #fff; /* cor do texto ao passar o mouse */
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens no centro */
+}
+
+form label {
+    width: 600px; /* Define a largura consistente */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 5px; /* Espaçamento inferior entre o label e o campo */
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form textarea,
+form button[type="submit"] {
+    width: 600px; /* Define a largura consistente */
+    margin-bottom: 15px; /* Espaçamento inferior entre os elementos */
+}
+
+/* Estilo para o select e suas opções */
+form select,
+form select option {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    width: 600px; /* Define a largura consistente */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #0a003a;
+    box-sizing: border-box;
+}
+
+/* Estilo para o placeholder do select */
+form select::placeholder {
+    color: #0a003a; /* Cor da fonte dos placeholders */
+    font-size: medium;
+    opacity: 1;
+}
+
+/* Estilo para o formulário */
+.form-container h2 {
+    text-align: center;
+}
+
+.form-container label {
+    display: block;
+    margin-top: 5px;
+    opacity: 1;
+    font-size: large;
+}
+
+.form-container .error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    width: 100%;
+    margin-top: -5px;
+    text-align: left;
+    min-height: 18px;
+}
+
+
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container input[type="number"],
+.form-container textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #0a003a;
+    box-sizing: border-box;
+}
+
+.form-container input[type="text"]::placeholder,
+.form-container input[type="date"]::placeholder,
+.form-container input[type="number"]::placeholder,
+.form-container textarea::placeholder {
+    color: #0a003a; /* Cor da fonte dos placeholders */
+    font-size: medium;
+    opacity: 1;
+}
+
+form button[type="submit"] {
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 15px 20px; /* Espaçamento interno */
+    border: none; /* Remover borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mudar cursor ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    transition: background-color 0.6s ease; /* Transição suave para mudança de cor */
+    margin-top: 15px;
+    margin-bottom: -5px;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+form button[type="submit"]:hover {
+    background-color: #0a003a; /* Cor de fundo ao passar o mouse */
+}
+/* Estilo para a barra superior */
+.top-bar {
+    width: 100%;
+    background-color: #05002a;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fixa a barra superior na tela */
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0.85;
+}
+
+.top-bar .logo {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* transição suave ao passar o mouse */
+}
+
+
+.top-bar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.top-bar nav ul li {
+    margin: 0 10px;
+}
+
+.top-bar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: larger;
+    transition: background-color 0.3s, color 0.3s; /* transição suave ao passar o mouse */
+}
+
+.top-bar .logo:hover,
+.top-bar nav ul li a:hover {
+    color: #4371f0;
+}
+
+/* Barra de Filtro */
+.filter-bar {
+    width: 50%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-bar input {
+    width: 50%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-bar input::placeholder {
+    color: #0a003a;
+    font-size: large;
+    font-weight: 500;    
+}
+
+.delete-icon {
+    position: absolute;
+    bottom: 0px; /* Ajuste conforme necessário */
+    left: 0px; /* Ajuste conforme necessário */
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0.7; /* Torna o ícone semi-transparente */
+    transition: opacity 0.3s ease;
+}
+
+.delete-icon:hover {
+    opacity: 1; /* Torna o ícone totalmente opaco ao passar o mouse */
+}

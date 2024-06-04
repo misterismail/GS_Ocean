@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const cardContainer = document.querySelector('.card-container-visualise');
     const filterInput = document.getElementById('filterInput');
 
-    // Função para criar um card com base nos dados do Local Storage
     function createCard(shipData) {
         const card = document.createElement('div');
         card.classList.add('card-visualise');
@@ -38,7 +37,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         card.appendChild(func);
 
         const deleteIcon = document.createElement('img');
-        deleteIcon.src = 'assets/images/excluir.png'; // Caminho para a imagem do ícone de exclusão
+        deleteIcon.src = 'assets/images/excluir.png'; 
         deleteIcon.alt = 'Delete';
         deleteIcon.classList.add('delete-icon');
         deleteIcon.addEventListener('click', function() {
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         return card;
     }
 
-    // Função para excluir um card e remover os dados do Local Storage
     function deleteCard(id) {
         localStorage.removeItem(id);
         const card = document.querySelector(`[data-id='${id}']`);
@@ -58,20 +56,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    // Função para filtrar os cards
     function filterCards(filterValue) {
         const cards = cardContainer.querySelectorAll('.card-visualise');
         cards.forEach(card => {
             const shipName = card.querySelector('h3').textContent.toLowerCase();
             if (shipName.includes(filterValue.toLowerCase())) {
-                card.style.display = 'block'; // Exibe o card se o nome do navio corresponder ao filtro
+                card.style.display = 'block'; 
             } else {
-                card.style.display = 'none'; // Oculta o card se o nome do navio não corresponder ao filtro
+                card.style.display = 'none'; 
             }
         });
     }
 
-    // Carregar e exibir os dados do Local Storage
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         const shipData = JSON.parse(localStorage.getItem(key));
@@ -79,8 +75,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         cardContainer.appendChild(card);
     }
 
-    // Adicionar um ouvinte de eventos para o campo de filtro
     filterInput.addEventListener('input', function() {
-        filterCards(this.value); // Chama a função de filtragem ao digitar no campo de filtro
+        filterCards(this.value); 
     });
 });

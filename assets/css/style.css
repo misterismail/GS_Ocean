@@ -1,4 +1,3 @@
-/* Estilo base */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,7 @@
 }
 
 body {
-    background-color: #0a003a; /* Cor de fundo #0a003a para a página */
+    background-color: #0a003a; 
     min-height: 100vh;
     width: 100%;
     color: #fff;
@@ -19,28 +18,23 @@ body {
     overflow-y: auto;
 }
 
-/* Estilo específico para a página visualizar.html */
 .visualizar-body {
-    background-color: #0a003a; /* Cor de fundo específica para visualizar.html */
-    padding: 1rem; /* Espaçamento das bordas da página */
-    /* Outros estilos específicos para visualizar.html */
+    background-color: #0a003a; 
+    padding: 1rem; 
 }
-/* Estilo para a barra de rolagem do Chrome, Edge e Safari */
 .visualizar-body::-webkit-scrollbar {
-    width: 10px; /* Largura da barra de rolagem */
-    border-radius: 10px; /* Arredonda a barra de rolagem */
-    background-color: transparent; /* Cor do fundo da barra de rolagem */
-    mix-blend-mode: difference; /* Sobreposição da barra de rolagem sobre o vídeo */
+    width: 10px; 
+    border-radius: 10px; 
+    background-color: transparent; 
+    mix-blend-mode: difference;
 }
 
-/* Estilo para o thumb */
 .visualizar-body::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.7); /* Cor do thumb (branco com 0.7 de opacidade) */
-    border-radius: 10px; /* Arredonda o thumb */
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 10px; 
 }
 
 
-/* Animação de entrada */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -50,7 +44,6 @@ body {
     }
 }
 
-/* Animação de saída */
 @keyframes fadeOut {
     from {
         opacity: 1;
@@ -60,12 +53,10 @@ body {
     }
 }
 
-/* Classe para animação de entrada */
 .fade-in {
     animation: fadeIn 1s forwards;
 }
 
-/* Classe para animação de saída */
 .fade-out {
     animation: fadeOut 1s forwards;
 }
@@ -77,17 +68,17 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    z-index: -1; /* Para que o vídeo fique atrás de todos os outros elementos */
+    z-index: -1; 
 }
 
 .video-background video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Para que o vídeo cubra toda a área */
+    object-fit: cover; 
 }
 
 .center {
-    z-index: 1; /* Para que o conteúdo fique acima do vídeo */
+    z-index: 1; 
 }
 
 .card-container {
@@ -114,7 +105,7 @@ body {
     box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
     padding: 20px;
     margin: 10px;
-    border: 1px solid #0a003a; /* Borda */
+    border: 1px solid #0a003a; 
 }
 .card-visualise {
     position: relative;
@@ -123,20 +114,20 @@ body {
     background-color: rgb(12, 12, 71);
     opacity: 75%;
     border-radius: 8px;
-    border: 1px solid #0a003a; /* Borda */
-    overflow-y: auto; /* Adicionando rolagem vertical quando necessário */
+    border: 1px solid #0a003a; 
+    overflow-y: auto; 
     box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
     padding: 20px;
     margin: 10px;
-    transition: box-shadow 0.3s ease; /* Transição suave para sombra ao passar o mouse */
+    transition: box-shadow 0.3s ease; 
 }
 
 .card-visualise h3 {
-    font-family: 'Arial', sans-serif; /* Fonte para o título */
-    font-size: 1.5em; /* Tamanho da fonte */
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.5em; 
     margin-bottom: 10px;
-    text-align: center; /* Centraliza o nome do navio */
-    min-height: 2.5em; /* Altura mínima para manter o alinhamento */
+    text-align: center; 
+    min-height: 2.5em; 
 }
 
 .card-item {
@@ -145,30 +136,30 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 .card-label {
-    width: 135px; /* Largura fixa para os labels */
+    width: 135px; 
     font-weight: bold;
-    margin-right: 10px; /* Espaçamento entre o label e o valor */
+    margin-right: 10px; 
 }
 
 .card-value {
-    flex: 1; /* Para ocupar o restante do espaço */
-    word-wrap: break-word; /* Quebra de linha para palavras longas */
+    flex: 1; 
+    word-wrap: break-word; 
 }
 
 .card-value p {
-    margin: 0; /* Remove margin para parágrafos */
-    line-height: 1.5; /* Espaçamento entre as linhas */
+    margin: 0; 
+    line-height: 1.5;
 }
 
 .card-visualise p {
-    font-family: 'Arial', sans-serif; /* Fonte para o texto */
-    font-size: 1em; /* Tamanho da fonte */
+    font-family: 'Arial', sans-serif; 
+    font-size: 1em; 
     margin-bottom: 10px;
-    line-height: 1.5; /* Adiciona espaçamento entre as linhas */
+    line-height: 1.5;
 }
 
 .card-visualise:hover {
-    box-shadow: 10px 8px 16px rgba(255, 255, 255, 0.4); /* Efeito de sombra ao passar o mouse */
+    box-shadow: 10px 8px 16px rgba(255, 255, 255, 0.4); 
 }
 
 .card-content {
@@ -193,31 +184,31 @@ body {
 }
 
 .button {
-    text-decoration: none; /* remover sublinhado do link */
-    color: #0a003a; /* cor do texto dos botões */
-    padding: 8px 20px; /* espaçamento interno dos botões */
-    border: 1px solid #0a003a; /* borda dos botões */
-    border-radius: 5px; /* bordas arredondadas dos botões */
-    background-color: #ddd; /* cor de fundo dos botões */
-    transition: background-color 0.3s, color 0.3s; /* transição suave ao passar o mouse */
-    width: 150px; /* Defina o tamanho horizontal desejado */
-    margin-bottom: 5px; /* Espaçamento vertical entre os botões */
+    text-decoration: none; 
+    color: #0a003a; 
+    padding: 8px 20px;
+    border: 1px solid #0a003a; 
+    border-radius: 5px;
+    background-color: #ddd; 
+    transition: background-color 0.3s, color 0.3s; 
+    width: 150px; 
+    margin-bottom: 5px; 
 }
 
 .button:hover {
-    background-color: #0a003a; /* cor de fundo ao passar o mouse */
-    color: #fff; /* cor do texto ao passar o mouse */
+    background-color: #0a003a;
+    color: #fff;
 }
 form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza os itens no centro */
+    align-items: center; 
 }
 
 form label {
-    width: 600px; /* Define a largura consistente */
-    text-align: left; /* Alinha o texto à esquerda */
-    margin-top: 5px; /* Espaçamento inferior entre o label e o campo */
+    width: 600px; 
+    text-align: left; 
+    margin-top: 5px; 
 }
 
 form input[type="text"],
@@ -225,16 +216,15 @@ form input[type="date"],
 form input[type="number"],
 form textarea,
 form button[type="submit"] {
-    width: 600px; /* Define a largura consistente */
-    margin-bottom: 15px; /* Espaçamento inferior entre os elementos */
+    width: 600px; 
+    margin-bottom: 15px; 
 }
 
-/* Estilo para o select e suas opções */
 form select,
 form select option {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
-    width: 600px; /* Define a largura consistente */
+    width: 600px; 
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -243,14 +233,12 @@ form select option {
     box-sizing: border-box;
 }
 
-/* Estilo para o placeholder do select */
 form select::placeholder {
-    color: #0a003a; /* Cor da fonte dos placeholders */
+    color: #0a003a; 
     font-size: medium;
     opacity: 1;
 }
 
-/* Estilo para o formulário */
 .form-container h2 {
     text-align: center;
 }
@@ -292,30 +280,28 @@ form select::placeholder {
 .form-container input[type="date"]::placeholder,
 .form-container input[type="number"]::placeholder,
 .form-container textarea::placeholder {
-    color: #0a003a; /* Cor da fonte dos placeholders */
+    color: #0a003a; 
     font-size: medium;
     opacity: 1;
 }
 
 form button[type="submit"] {
-    background-color: #4CAF50; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    padding: 15px 20px; /* Espaçamento interno */
-    border: none; /* Remover borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Mudar cursor ao passar o mouse */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: bold; /* Peso da fonte */
-    transition: background-color 0.6s ease; /* Transição suave para mudança de cor */
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 15px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    font-weight: bold;
+    transition: background-color 0.6s ease; 
     margin-top: 15px;
     margin-bottom: -5px;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
 form button[type="submit"]:hover {
-    background-color: #0a003a; /* Cor de fundo ao passar o mouse */
+    background-color: #0a003a; 
 }
-/* Estilo para a barra superior */
 .top-bar {
     width: 100%;
     background-color: #05002a;
@@ -324,7 +310,7 @@ form button[type="submit"]:hover {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    position: fixed; /* Fixa a barra superior na tela */
+    position: fixed; 
     top: 0;
     left: 0;
     z-index: 10;
@@ -336,7 +322,7 @@ form button[type="submit"]:hover {
     font-size: 2em;
     font-weight: bold;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s; /* transição suave ao passar o mouse */
+    transition: background-color 0.3s, color 0.3s; 
 }
 
 
@@ -354,7 +340,7 @@ form button[type="submit"]:hover {
     text-decoration: none;
     font-weight: 600;
     font-size: larger;
-    transition: background-color 0.3s, color 0.3s; /* transição suave ao passar o mouse */
+    transition: background-color 0.3s, color 0.3s; 
 }
 
 .top-bar .logo:hover,
@@ -362,7 +348,6 @@ form button[type="submit"]:hover {
     color: #4371f0;
 }
 
-/* Barra de Filtro */
 .filter-bar {
     width: 50%;
     position: sticky;
@@ -389,15 +374,15 @@ form button[type="submit"]:hover {
 
 .delete-icon {
     position: absolute;
-    bottom: 0px; /* Ajuste conforme necessário */
-    left: 0px; /* Ajuste conforme necessário */
+    bottom: 0px; 
+    left: 0px; 
     cursor: pointer;
     width: 50px;
     height: 50px;
-    opacity: 0.7; /* Torna o ícone semi-transparente */
+    opacity: 0.7; 
     transition: opacity 0.3s ease;
 }
 
 .delete-icon:hover {
-    opacity: 1; /* Torna o ícone totalmente opaco ao passar o mouse */
+    opacity: 1; 
 }

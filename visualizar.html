@@ -11,7 +11,6 @@
 <body class="visualizar-body">
     <div class="top-bar">
         <a href="https://www.fiap.com.br/graduacao/global-solution/" class="logo">Ocean</a>
-        <!-- Barra de Filtro -->
     <div class="filter-bar">
         <input type="text" id="filterInput" placeholder="Filter by ship name...">
     </div>
@@ -30,15 +29,12 @@
     </div>
     
     <div class="card-container-visualise">
-        <!-- Adicione mais cards conforme necessário -->
     </div>
     
     <script>
     document.addEventListener('DOMContentLoaded', (event) => {
-        // Adiciona a classe de animação de entrada na página
         document.body.classList.add('fade-in');
 
-        // Adiciona um listener para os links que devem ter a transição
         const links = document.querySelectorAll('a');
         links.forEach(link => {
             link.addEventListener('click', function(e) {
@@ -48,7 +44,7 @@
                     document.body.classList.add('fade-out');
                     setTimeout(() => {
                         window.location.href = href;
-                    }, 500); // Atraso correspondente à duração da animação
+                    }, 500); 
                 }
             });
         });

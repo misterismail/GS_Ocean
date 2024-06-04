@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.body.classList.add('fade-in'); // Adiciona o fadeIn na página
+    document.body.classList.add('fade-in'); 
 
     const links = document.querySelectorAll('a');
     links.forEach(link => {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.classList.add('fade-out');
                 setTimeout(() => {
                     window.location.href = href;
-                }, 500); // Atraso correspondente à duração da animação
+                }, 500);
             }
         });
     });
